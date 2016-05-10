@@ -7,10 +7,19 @@
 //
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    cout << "Using namespace :P more cool \n";
+    
+    constexpr int WORLD_LENGTH = 5;
+    cout << "Using namespace "  << WORLD_LENGTH << " more cool \n";
+    cout << endl;
+    
+    cout << "Enter your guess: ";
+    string guess = "";
+    cin >> guess;
+    cout << "Your guess is " << guess << endl;
     return 0;
 }
