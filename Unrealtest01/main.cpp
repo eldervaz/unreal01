@@ -8,6 +8,8 @@
 
 #include <iostream>
 //#include <string> //for windows
+#include "GameClass.h"
+
 using namespace std;
 
 

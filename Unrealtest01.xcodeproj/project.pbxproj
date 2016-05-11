@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		98035DC01CE23BA800C47A0C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98035DBF1CE23BA800C47A0C /* main.cpp */; };
+		98FC54D01CE2D37300BD103E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FC54CE1CE2D37300BD103E /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		98035DBC1CE23BA800C47A0C /* Unrealtest01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Unrealtest01; sourceTree = BUILT_PRODUCTS_DIR; };
 		98035DBF1CE23BA800C47A0C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		98FC54CE1CE2D37300BD103E /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		98FC54CF1CE2D37300BD103E /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				98035DBF1CE23BA800C47A0C /* main.cpp */,
+				98FC54CE1CE2D37300BD103E /* Game.cpp */,
+				98FC54CF1CE2D37300BD103E /* Game.hpp */,
 			);
 			path = Unrealtest01;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98035DC01CE23BA800C47A0C /* main.cpp in Sources */,
+				98FC54D01CE2D37300BD103E /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,7 @@
 				98035DC51CE23BA800C47A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
