@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		98035DC01CE23BA800C47A0C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98035DBF1CE23BA800C47A0C /* main.cpp */; };
-		98FC54D01CE2D37300BD103E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FC54CE1CE2D37300BD103E /* Game.cpp */; };
+		98FC54D11CE3CC2D00BD103E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FC54CE1CE2D37300BD103E /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		98035DBA1CE23BA800C47A0C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -93,6 +93,9 @@
 		98035DB41CE23BA800C47A0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = eldervaz;
 				TargetAttributes = {
@@ -124,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98035DC01CE23BA800C47A0C /* main.cpp in Sources */,
-				98FC54D01CE2D37300BD103E /* Game.cpp in Sources */,
+				98FC54D11CE3CC2D00BD103E /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,9 +171,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OSACOMPILE_EXECUTE_ONLY = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -206,8 +211,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OSACOMPILE_EXECUTE_ONLY = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -215,14 +222,20 @@
 		98035DC41CE23BA800C47A0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_NO_COMMON_BLOCKS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		98035DC51CE23BA800C47A0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_NO_COMMON_BLOCKS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

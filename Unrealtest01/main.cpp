@@ -7,8 +7,9 @@
 //
 
 #include <iostream>
-//#include <string> //for windows
-#include "GameClass.h"
+#include <string> //for windows
+#include "Game.hpp"
+
 
 using namespace std;
 
@@ -17,6 +18,7 @@ void printIntro();
 string getGuess();
 void playGame();
 bool askForPlay();
+Game BCGame;
 
 int main(int argc, const char * argv[]) {
     
@@ -58,6 +60,10 @@ string getGuess(){
 
 
 void printIntro(){
+    
+    //
+    //int maxTries = BCGame.GetMaxTries();
+    
     constexpr int WORLD_LENGTH = 5;
     cout << "Using namespace "  << WORLD_LENGTH << " more cool \n";
     cout << endl;

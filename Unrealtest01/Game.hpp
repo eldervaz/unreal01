@@ -7,8 +7,9 @@
 //
 
 
+#pragma once
 #include <string>
-using namespace std;
+//using namespace std;
 
 
 class Game{
@@ -18,11 +19,11 @@ public:
     int GetMaxTries();
     int GetCurrentTry();
     bool IsGameWon();
-    bool CheckGuessValidity(string);
+    bool CheckGuessValidity(std::string);
     
     
     
 private:
     int MyCurrentTry;
-    int MyMaxTries;
+    int MyMaxTries = 5;
 };
