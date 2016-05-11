@@ -7,22 +7,41 @@
 //
 
 #include <iostream>
-#include <string>
+//#include <string> //for windows
 using namespace std;
 
 
 void printIntro();
 string getGuess();
+void playGame();
+bool askForPlay();
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
     
-    printIntro();
+    bool askMe = false;
     
-    string guess = getGuess();
+    do{
+        printIntro();
+        askMe = askForPlay();
+        playGame();
+    }
+    while (askMe);
     
-    cout << "Your guess is " <<  guess << endl;
+    
     return 0;
+}
+
+bool askForPlay(){
+    
+    cout << "Do you want to play? (y/n) ";
+    string response = "";
+    getline( cin, response);
+    return (response[0] == 'y') || (response[0] == 'Y') ;
+}
+
+void playGame(){
+    string guess = getGuess();
+    cout << "Your guess is " <<  guess << endl;
 }
 
 string getGuess(){
