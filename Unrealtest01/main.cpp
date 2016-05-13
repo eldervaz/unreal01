@@ -26,8 +26,9 @@ int main(int argc, const char * argv[]) {
     
     do{
         printIntro();
-        askMe = askForPlay();
         playGame();
+        askMe = askForPlay();
+        
     }
     while (askMe);
     
@@ -37,22 +38,38 @@ int main(int argc, const char * argv[]) {
 
 bool askForPlay(){
     
-    cout << "Do you want to play? (y/n) ";
-    string response = "";
-    getline( cin, response);
-    return (response[0] == 'y') || (response[0] == 'Y') ;
+    cout << "Do you want to play again (y/n)? ";
+    string Response = "";
+    getline(cin, Response);
+    return (Response[0] == 'y') || (Response[0] == 'Y');
+    
 }
 
 void playGame(){
-    string guess = getGuess();
-    cout << "Your guess is " <<  guess << endl;
+    
+    BCGame.Reset();
+    
+    int maxTries = BCGame.GetMaxTries();
+    
+    for (int i=0; i<maxTries; i++) {
+        string guess = getGuess();
+        cout << "Your guess is " <<  guess << endl;
+    }
+    
+    
+    
+    
+    
 }
 
 string getGuess(){
-    cout << "Enter your guess: ";
+    
+    
+    int currentTry = BCGame.GetCurrentTry();
+    
+    cout <<  "Try " <<  currentTry << " Enter your guess: ";
     string guess = "";
     //cin >> guess;
-    
     getline (cin, guess);
     
     return guess;
@@ -61,11 +78,11 @@ string getGuess(){
 
 void printIntro(){
     
-    //
-    //int maxTries = BCGame.GetMaxTries();
+    int32 CurrentTry = BCGame.GetCurrentTry();
     
-    constexpr int WORLD_LENGTH = 5;
-    cout << "Using namespace "  << WORLD_LENGTH << " more cool \n";
+    cout << "Try " << CurrentTry << ". Enter your guess: ";
+    string Guess = "";
+    std::getline(std::cin, Guess);
     cout << endl;
     
 }

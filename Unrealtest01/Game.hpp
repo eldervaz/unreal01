@@ -11,19 +11,38 @@
 #include <string>
 //using namespace std;
 
+using FString = std::string;
+using int32 = int;
+
+struct BullCowCount
+{
+    int32 Bulls = 0;
+    int32 Cows = 0;
+};
+
 
 class Game{
     
 public:
+    
+    Game();
+    
+    int32 GetMaxTries() const;
+    int32 GetCurrentTry() const;
+    bool IsGameWon() const;
+    
+    
     void Reset();
-    int GetMaxTries();
-    int GetCurrentTry();
-    bool IsGameWon();
-    bool CheckGuessValidity(std::string);
+    bool CheckGuessValidity(FString); // TODO make a more rich return value.
+    BullCowCount SubmitGuess(FString);
     
     
     
 private:
-    int MyCurrentTry;
-    int MyMaxTries = 5;
+    int32 MyCurrentTry;
+    int32 MyMaxTries;
+    FString MyHiddenWord;
 };
+
+
+
